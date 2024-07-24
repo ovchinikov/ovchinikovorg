@@ -2,7 +2,7 @@ import prisma from '@/lib/db';
 
 export async function getPosts() {
   return await prisma.post.findMany({
-    include: { User: true, Category: true },
+    include: { Category: true },
   });
 }
 

@@ -4,6 +4,8 @@ import { z } from 'zod';
 import { titleToSlug } from './utils';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { signIn } from '@/auth';
+import { AuthError } from 'next-auth';
 
 const FormSchema = z.object({
   id: z.string().uuid(),
@@ -199,3 +201,18 @@ export async function deleteCategory(id: string) {
   revalidatePath('/dashboard/category');
   redirect('/dashboard/category');
 }
+
+export const authenticate = async (formData: FormData) => {
+  try {
+    await signIn('credentials', formData);
+  } catch (error) {
+    if (error instanceof AuthError) {
+      switch (error.type) {
+        case 'CredentialsSignin':
+          return 'Invalid Credentials';
+        default:
+          return 'Something went wrong.';
+      }
+    }
+  }
+};

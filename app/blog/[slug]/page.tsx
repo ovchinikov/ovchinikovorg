@@ -6,9 +6,12 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   const blog = await getPost(params.slug);
 
   return (
-    <>
-      <h1>{blog?.title}</h1>
-      <p>{blog?.content}</p>
+    <div className='md:container mx-auto max-w-screen-lg px-4'>
+      <h1 className='text-3xl font-bold mb-4'>{blog?.title}</h1>
+      <article
+        className=' prose prose-lg max-w-none'
+        dangerouslySetInnerHTML={{ __html: blog?.content || '' }}
+      />
       <p>
         By <i>{blog?.User?.name}</i>
       </p>
@@ -18,7 +21,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         </Link>
       </p>
       <p>{dateToString(blog?.createdAt)}</p>
-    </>
+    </div>
   );
 };
 

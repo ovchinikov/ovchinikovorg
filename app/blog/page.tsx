@@ -1,4 +1,6 @@
+import Blog from '@/components/blog/Blog';
 import { getPosts } from '@/lib/data';
+import { dateToString } from '@/lib/utils';
 import Link from 'next/link';
 
 const Page = async () => {
@@ -8,11 +10,12 @@ const Page = async () => {
     <>
       <h1>Blogs</h1>
 
-      <div>
+      <div className='grid gap-4 grid-cols-1  sm:grid-cols-2 md:grid-cols-3 p-4 sm:container mx-auto'>
         {posts.map((post) => (
-          <Link href={`/blog/${post.slug}`} key={post.id}>
-            <h2>{post.title}</h2>
-          </Link>
+          <div key={post.id}>
+            <Blog {...post} />
+            <hr className='block sm:hidden' />
+          </div>
         ))}
       </div>
     </>
