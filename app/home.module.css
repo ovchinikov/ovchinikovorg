@@ -1,0 +1,18 @@
+.customQuote {
+  quotes: '“' '”' '‘' '’';
+}
+
+.customQuote::before {
+  content: open-quote;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #3939dc;
+  /* Adjust the size as needed */
+}
+
+.customQuote::after {
+  content: close-quote;
+  font-weight: bold;
+  color: #3939dc;
+  font-size: 1.25em; /* Adjust the size as needed */
+}

@@ -22,11 +22,18 @@ const Page = () => {
       <div className='flex items-center justify-center p-6 md:w-full md:px-28 md:py-12'>
         {/* Add Hero Images Here */}
         <Image
-          src='/digital-marketing-desktop.webp'
+          src='/seo-desktop.webp'
           width={1000}
-          height={760}
+          height={806}
           className='hidden md:block'
           alt='Screenshots of the dashboard project showing desktop version'
+        />
+        <Image
+          src='/seo-mobile.webp'
+          width={560}
+          height={452}
+          className='block md:hidden'
+          alt='Screenshots of the dashboard project showing mobile version'
         />
       </div>
       <div className='mt-6'>

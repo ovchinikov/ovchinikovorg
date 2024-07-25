@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
+  ArrowRightCircleIcon,
   ChartBarIcon,
   CodeBracketIcon,
   CreditCardIcon,
@@ -17,6 +18,7 @@ import {
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
 const Page = () => {
@@ -66,7 +68,7 @@ const Page = () => {
       </h1>
       <div className='flex items-center justify-center p-6'>
         <Image
-          src='/software-development-desktop.webp'
+          src='/software-dev.webp'
           alt='software development in kenya'
           height={492}
           width={1000}
@@ -119,7 +121,10 @@ const Page = () => {
         <h1 className={`text-2xl font-bold antialiased ${lusitana.className}`}>
           Ready to get started on your next project?
         </h1>
-        <Button>Get in touch</Button>
+        <Button className='flex gap-2'>
+          <Link href='/contact'>Get in touch</Link>
+          <ArrowRightCircleIcon height={24} width={24} />
+        </Button>
       </div>
     </div>
   );

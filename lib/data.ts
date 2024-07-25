@@ -6,6 +6,15 @@ export async function getPosts() {
   });
 }
 
+// fetch only 3 posts for the home page and sort by date
+export async function getHomePosts() {
+  return await prisma.post.findMany({
+    take: 3,
+    orderBy: { createdAt: 'desc' },
+    include: { Category: true },
+  });
+}
+
 export async function getPost(slug: string) {
   return await prisma.post.findUnique({
     where: { slug: slug },
