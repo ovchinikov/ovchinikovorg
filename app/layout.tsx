@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Lusitana } from 'next/font/google';
 import './globals.css';
+import { MobileNav } from '@/components/mobile-nav';
+import { MainNav } from '@/components/main-nav';
 
 const inter = Inter({ subsets: ['latin'] });
 export const lusitana = Lusitana({
@@ -20,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} min-h-screen`}>{children}</body>
+      <body className={`${inter.className} min-h-screen`}>
+        <MainNav />
+        {children}
+      </body>
     </html>
   );
 }

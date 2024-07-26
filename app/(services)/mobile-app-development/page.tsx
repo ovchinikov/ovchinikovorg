@@ -50,6 +50,7 @@ const Page = () => {
           alt='mobile app-development in kenya'
           width={1000}
           height={667}
+          priority
           className='hidden md:block'
         />
         <Image
@@ -84,7 +85,8 @@ const Page = () => {
             src='/phone-desktop.webp'
             alt='mobile app development'
             width={1000}
-            height={800}
+            height={667}
+            priority
             className='hidden md:block'
           />
           <Image
@@ -92,6 +94,7 @@ const Page = () => {
             alt='mobile app development'
             width={550}
             height={417}
+            priority
             className='block md:hidden'
           />
         </div>
