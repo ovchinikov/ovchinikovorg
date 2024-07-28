@@ -8,8 +8,27 @@ import {
   LockClosedIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
+import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
+
+export const metadata: Metadata = {
+  title: 'E-commerce Development',
+  keywords: [
+    'e-commerce development',
+    'e-commerce development in Kenya',
+    'e-commerce development services',
+    'e-commerce development company',
+    'e-commerce development agency',
+    'e-commerce development in Nairobi',
+    'e-commerce development in Mombasa',
+    'e-commerce development in Kisumu',
+    'e-commerce development in Nakuru',
+    'e-commerce development in Eldoret',
+    'e-commerce development in Thika',
+  ],
+};
 
 const Page = () => {
   const features = [
@@ -52,11 +71,6 @@ const Page = () => {
   ];
   return (
     <div className='mt-10 p-4 md:container mx-auto'>
-      <h1
-        className={`${lusitana.className} text-3xl text-center md:text-2xl antialiased font-bold`}
-      >
-        E-commerce Web Development
-      </h1>
       <div className='flex items-center justify-center p-6'>
         <Image
           src='/e-commerce-desktop.webp'
@@ -64,6 +78,7 @@ const Page = () => {
           className='hidden md:block'
           height={667}
           width={1000}
+          priority={true}
         />
         <Image
           src='/e-commerce-mobile.webp'
@@ -71,6 +86,7 @@ const Page = () => {
           alt='e-commerce web development in Kenya'
           height={411}
           width={560}
+          priority={true}
         />
       </div>
       <div className='mt-6'>
@@ -82,10 +98,12 @@ const Page = () => {
           </Balancer>
         </h1>
         <p className='mt-4 text-center'>
-          We build custom <strong>E-Commerce</strong> websites that are designed
-          to help you sell more products and services online. Our websites are
-          designed to be user-friendly and easy to navigate. We also provide
-          excellent customer support to help you grow your business.
+          We build custom{' '}
+          <strong className='text-indigo-500'>E-Commerce</strong> websites that
+          are designed to help you sell more products and services online. Our
+          websites are designed to be user-friendly and easy to navigate. We
+          also provide excellent customer support to help you grow your
+          business.
         </p>
       </div>
       <div className='mt-6'>
@@ -98,7 +116,9 @@ const Page = () => {
           {features.map((feature, index) => (
             <div key={index} className='p-4 border rounded-lg'>
               <div className='flex items-center gap-2'>
-                {feature.icon}
+                <div className='flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-500 rounded-full'>
+                  {feature.icon}
+                </div>
                 <h1
                   className={`${lusitana.className} font-bold ml-2 text-lg font-semi-bold`}
                 >
@@ -114,7 +134,9 @@ const Page = () => {
         <h1 className={`${lusitana.className} text-2xl font-bold`}>
           <Balancer>Get in touch with us today</Balancer>
         </h1>
-        <Button className='rounded-full'>Talk to an expert</Button>
+        <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
+          <Link href='/contact'>Talk to an expert</Link>
+        </Button>
       </div>
     </div>
   );

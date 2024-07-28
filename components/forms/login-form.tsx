@@ -27,7 +27,8 @@ const LoginForm = () => {
                 type='email'
                 name='email'
                 placeholder='Email'
-                className='mt-2 w-full'
+                autoComplete='off'
+                className='mt-2 w-full focus-visible:ring-indigo-500 focus-within:outline-none'
               />
             </div>
 
@@ -37,13 +38,16 @@ const LoginForm = () => {
                 type='password'
                 name='password'
                 placeholder='Password'
-                className='mt-2 w-full'
+                className='mt-2 w-full focus-visible:ring-indigo-500 focus-within:outline-none'
               />
             </div>
           </div>
         </CardContent>
         <CardFooter>
-          <Button type='submit' className='w-full'>
+          <Button
+            type='submit'
+            className='w-full bg-indigo-500 hover:bg-indigo-600'
+          >
             Login
           </Button>
         </CardFooter>

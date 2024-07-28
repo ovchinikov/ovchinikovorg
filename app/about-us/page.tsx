@@ -10,6 +10,11 @@ import { lusitana } from '../layout';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+};
 
 const Page = () => {
   const values = [
@@ -42,20 +47,37 @@ const Page = () => {
   return (
     <div className='mt-10 p-4 md:container md:mx-auto'>
       <div className='mt-4'>
-        <h1
-          className={`${lusitana.className} text-2xl text-center mb-2 font-bold `}
-        >
-          About Us
-        </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-          deserunt. Aut quod et quos. Perspiciatis voluptate minus, blanditiis
-          alias, quibusdam dicta error ratione, molestias adipisci commodi eius
-          quasi voluptatem facere. Iste amet sed dolore blanditiis animi
-          doloribus voluptatibus laborum minima enim distinctio, nobis itaque,
-          magnam minus consequuntur odit ipsa quam nulla error doloremque,
-          deleniti reprehenderit sequi quod. Quas, nobis eius.
+          <Balancer>
+            <strong>Vinokov Tech Co Ltd</strong>, founded in 2022, specializes
+            in Software development, SEO optimization, Copywriting, Web and
+            Mobile app development, and E-commerce solutions. Our mission is to
+            empower businesses with innovative technology and creative
+            solutions. Let us help you achieve your digital goals with expert
+            craftsmanship and personalized service.
+          </Balancer>
         </p>
+        <div className='mt-4'>
+          <Balancer>
+            We&apos;ve had the privilege of working with a diverse range of
+            clients, helping them to succeed in the digital world. Some of our
+            esteemed clients include{' '}
+            <span className='font-bold text-indigo-500'>
+              <Link href='https://gsportskit.shop'>GsportsKit</Link>
+            </span>
+            ,{' '}
+            <span className='font-bold text-indigo-500'>
+              <Link href='https://spb.stolle.ru/'>Shtolle</Link>
+            </span>
+            , and{' '}
+            <span className='font-bold text-indigo-500'>
+              <Link href='https://stomatologiya-spb.com/'>
+                Studio Esthetic Dental
+              </Link>
+            </span>
+            . Join them and experience the Vinokov Tech difference.
+          </Balancer>
+        </div>
       </div>
 
       <div className='mt-6'>
@@ -70,7 +92,7 @@ const Page = () => {
               key={index}
               className='flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg'
             >
-              <div className='flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full'>
+              <div className='flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-500 rounded-full'>
                 {value.icon}
               </div>
               <h2 className='mt-2 text-lg font-semibold'>{value.title}</h2>
@@ -87,16 +109,16 @@ const Page = () => {
           Our Mission
         </h1>
         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-          <p className='flex-1 text-center'>
+          <p className='flex-1'>
             <Balancer>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptate, deserunt. Aut quod et quos. Perspiciatis voluptate
-              minus, blanditiis alias, quibusdam dicta error ratione, molestias
-              adipisci commodi eius quasi voluptatem facere. Iste amet sed
-              dolore blanditiis animi doloribus voluptatibus laborum minima enim
-              distinctio, nobis itaque, magnam minus consequuntur odit ipsa quam
-              nulla error doloremque, deleniti reprehenderit sequi quod. Quas,
-              nobis eius.
+              Our mission is to help businesses grow by providing them with high
+              quality software development services. We are committed to
+              delivering innovative solutions that meet the needs of our
+              clients. We are passionate about technology and strive to provide
+              the best possible service to our customers. We believe in
+              integrity, teamwork, and customer satisfaction. Our goal is to
+              build long-term relationships with our clients and help them
+              achieve their business goals.{' '}
             </Balancer>
           </p>
           <div className='flex-1 flex justify-center items-center p-6'>
@@ -105,6 +127,7 @@ const Page = () => {
               alt='Mission'
               width={1000}
               height={600}
+              className='h-auto w-auto'
             />
           </div>
         </div>
@@ -119,15 +142,13 @@ const Page = () => {
           </h1>
           <p className='text-center mt-2'>
             <Balancer>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptate, deserunt. Aut quod et quos. Perspiciatis voluptate
-              minus, blanditiis
+              Book a free consultation with us today. We are here to help you
+              with all your software development needs.
             </Balancer>
           </p>
         </div>
-        <Button className='flex gap-2'>
-          <Link href='/contact'>Contact Us</Link>
-          <ArrowRightCircleIcon height={24} width={24} />
+        <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
+          <Link href='/contact'>Contact us</Link>
         </Button>
       </div>
     </div>

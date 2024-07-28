@@ -10,6 +10,7 @@
     "seed": "tsc && node prisma/seed.ts"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.1.5",
     "@prisma/client": "5.17.0",
     "@radix-ui/react-avatar": "^1.1.0",
@@ -30,6 +31,9 @@
     "next-auth": "5.0.0-beta.19",
     "react": "^18",
     "react-dom": "^18",
+    "react-floating-whatsapp": "^5.0.8",
+    "react-social-icons": "^6.17.0",
+    "react-whatsapp-widget": "^2.2.0",
     "react-wrap-balancer": "^1.1.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",

@@ -36,6 +36,7 @@ const UpdateCategory = async ({ id }: UpdateCategoryParams) => {
                 id='category'
                 name='category'
                 defaultValue={category?.name}
+                className='focus-visible:ring-indigo-500 focus-within:outline-none'
               />
             </div>
             <CardFooter className='flex justify-end items-center gap-2 mt-6'>
@@ -45,7 +46,12 @@ const UpdateCategory = async ({ id }: UpdateCategoryParams) => {
               >
                 Cancel
               </Link>
-              <Button type='submit'>Edit Category</Button>
+              <Button
+                type='submit'
+                className='bg-indigo-500 hover:bg-indigo-600'
+              >
+                Edit Category
+              </Button>
             </CardFooter>
           </form>
         </CardContent>

@@ -1,9 +1,12 @@
 import { lusitana } from '@/app/layout';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import ContacForm from '@/components/forms/Contact';
+import { Metadata } from 'next';
+
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+};
 
 const Page = () => {
   return (
@@ -36,29 +39,7 @@ const Page = () => {
         >
           Contact Us
         </h2>
-        <form action='' className='flex justify-center items-center'>
-          <div className='grid grid-cols-1 gap-4'>
-            <div>
-              <Label htmlFor='name'>Name</Label>
-              <Input type='text' id='name' className='mt-2' />
-            </div>
-            <div>
-              <Label htmlFor='phone'>Phone </Label>
-              <Input type='tel' id='phone' className='mt-2' />
-            </div>
-            <div>
-              <Label htmlFor='message'>Message</Label>
-              <Textarea
-                cols={30}
-                rows={10}
-                id='message'
-                placeholder='Type your message here...'
-                className='mt-2'
-              />
-            </div>
-            <Button type='submit'>Submit</Button>
-          </div>
-        </form>
+        <ContacForm />
       </div>
     </div>
   );

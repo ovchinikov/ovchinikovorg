@@ -1,8 +1,25 @@
 import { lusitana } from '@/app/layout';
 import { Button } from '@/components/ui/button';
 import { CheckBadgeIcon } from '@heroicons/react/24/outline';
+import { Metadata } from 'next';
 import Image from 'next/image';
-
+import Link from 'next/link';
+export const metadata: Metadata = {
+  title: 'Copywriting',
+  keywords: [
+    'copywriting',
+    'copywriting in Kenya',
+    'copywriting services',
+    'copywriting company',
+    'copywriting agency',
+    'copywriting in Nairobi',
+    'copywriting in Mombasa',
+    'copywriting in Kisumu',
+    'copywriting in Nakuru',
+    'copywriting in Eldoret',
+    'copywriting in Thika',
+  ],
+};
 const Page = () => {
   // copywriting services
   const services = [
@@ -14,14 +31,9 @@ const Page = () => {
   return (
     <div className='mt-10 p-4 md:container md:mx-auto'>
       <h1
-        className={`${lusitana.className} text-3xl md:text-2xl text-center font-bold antialiased`}
-      >
-        Copywriting
-      </h1>
-      <h1
         className={`${lusitana.className} text-3xl mt-6 text-center font-bold antialiased`}
       >
-        We will write a story that sells.
+        We write compelling copy that sells.
       </h1>
       <p className='text-center mt-6 text-lg'>
         Our copywriting services will help you create a compelling story that
@@ -34,6 +46,7 @@ const Page = () => {
           width={1000}
           height={667}
           className='hidden md:block'
+          priority={true}
         />
         <Image
           src='/copy-writing-mobile.webp'
@@ -41,6 +54,7 @@ const Page = () => {
           width={600}
           height={400}
           className='block md:hidden'
+          priority={true}
         />
       </div>
       <div>
@@ -53,7 +67,7 @@ const Page = () => {
         <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2'>
           {services.map((service, index) => (
             <li key={index} className='flex items-center border p-6 rounded-lg'>
-              <CheckBadgeIcon className='h-5 w-5 text-green-500' />
+              <CheckBadgeIcon className='h-5 w-5 text-indigo-500' />
               <span className='ml-2'>{service}</span>
             </li>
           ))}
@@ -87,7 +101,9 @@ const Page = () => {
               your audience, get in touch with us today.
             </p>
           </div>
-          <Button className='mt-6 sm:w-1/3 rounded-full'>Contact us</Button>
+          <Button className='mt-6 sm:w-1/3 rounded-full bg-indigo-500 hover:bg-indigo-900'>
+            <Link href='/contact'>Contact us</Link>
+          </Button>
         </div>
       </div>
     </div>

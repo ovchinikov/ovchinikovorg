@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import styles from '@/app/home.module.css';
 import { getHomePosts } from '@/lib/data';
 import { dateToString } from '@/lib/utils';
+import Blog from '@/components/blog/Blog';
 
 export default async function Home() {
   const posts = await getHomePosts();
@@ -93,7 +94,7 @@ export default async function Home() {
         </div>
       </div>
       <div className='mt-6'>
-        <h2 className={`${lusitana.className} text-center text-2xl font-bold`}>
+        <h2 className={`${lusitana.className} text-center text-3xl font-bold`}>
           <Balancer>Growing your businesses is our main business</Balancer>
         </h2>
         <p className='sm:text-center'>
@@ -101,9 +102,10 @@ export default async function Home() {
             We work with businesses of all sizes to help them achieve their
             goals. Whether you are a small business looking to grow or a large
             corporation looking to improve your processes, we can help. We
-            integrate <strong>Artificial Intelligence</strong> and other modern
-            technologies to ensure that your business is always ahead of the
-            competition and running smoothly.
+            integrate{' '}
+            <strong className='text-indigo-500'>Artificial Intelligence</strong>{' '}
+            and other modern technologies to ensure that your business is always
+            ahead of the competition and running smoothly.
           </Balancer>
         </p>
       </div>
@@ -124,14 +126,20 @@ export default async function Home() {
                     alt={service.name}
                     width={200}
                     height={200}
+                    className='h-auto w-auto'
                   />
 
-                  <h2 className='text-xl text-center font-bold'>
+                  <h2
+                    className={`${lusitana.className} text-xl text-center font-bold`}
+                  >
                     {service.name}
                   </h2>
                   <div>
-                    <Button variant='link' className='flex gap-2'>
-                      <span>Learn more</span>
+                    <Button
+                      variant='link'
+                      className='flex gap-2 text-indigo-500'
+                    >
+                      <span className=''>Learn more</span>
                       <ArrowRightCircleIcon height={20} width={20} />
                     </Button>
                   </div>
@@ -180,9 +188,8 @@ export default async function Home() {
             </Balancer>
           </h1>
         </div>
-        <Button className='flex justify gap-4'>
+        <Button className='flex justify gap-4 rounded-full bg-indigo-500 hover:bg-indigo-900'>
           <Link href='/contact'>Contact us</Link>
-          <ArrowRightCircleIcon height={20} width={20} />
         </Button>
       </div>
       <div className='mt-6'>
@@ -193,34 +200,14 @@ export default async function Home() {
         <div className='grid gap-4 grid-cols-1  sm:grid-cols-2 md:grid-cols-3 p-4 sm:container mx-auto'>
           {posts.map((post, index) => (
             <>
-              <div key={post.id}>
-                <div className='rounded-lg p-4 h-[200px]'>
-                  <Link href={`/blog/${post.slug}`}>
-                    <div className='flex flex-col gap-6 h-full'>
-                      <div className='flex flex-col gap-2 flex-grow'>
-                        <h1 className='text-2xl text-center font-bold'>
-                          {post.title}
-                        </h1>
-                        <h1 className='text-sm text-blue-500 text-center'>
-                          {dateToString(post.createdAt)}
-                        </h1>
-                      </div>
-
-                      <button className='mb-5 flex justify-center items-center gap-1 font-bold outline-none text-blue-500 hover:font-bold ease-in-out'>
-                        Read more
-                        <ArrowRightCircleIcon height={20} width={20} />
-                      </button>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Blog key={post.id} {...post} />
               {index < posts.length - 1 && <hr className='block sm:hidden' />}
             </>
           ))}
         </div>
         <Button
           variant='link'
-          className='flex justify-center items-center gap-2 rounded-full'
+          className='flex justify-center items-center gap-3 text-indigo-500 underline'
         >
           <Link href='/blog'>View all posts</Link>
           <ArrowRightCircleIcon height={20} width={20} />

@@ -131,7 +131,9 @@ const EditBlog = ({ categories, blog }: UpdateBlogProps) => {
           >
             Cancel
           </Link>
-          <Button type='submit'>Edit Blog</Button>
+          <Button type='submit' className='bg-indigo-500 hover:bg-indigo-600'>
+            Edit Blog
+          </Button>
         </CardFooter>
       </Card>
     </form>

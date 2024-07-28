@@ -71,17 +71,17 @@ const CreateBlog = ({ categories }: CreateBlogProps) => {
                 placeholder='Title'
                 name='title'
                 id='title'
-                className='mt-2 w-full'
+                className='mt-2 w-full focus-within:outline-none focus-visible:ring-indigo-500'
               />
             </div>
             <div className='flex flex-col space-y-5'>
               <Label htmlFor='category'>Category</Label>
 
-              <Select name='category'>
+              <Select>
                 <SelectTrigger>
                   <SelectValue placeholder='Category' />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className='focus-visible:ring-indigo-500 focus-within:outline-none'>
                   {categories.map((category) => (
                     <SelectItem key={category.id} value={category.name}>
                       {category.name}
@@ -110,7 +110,9 @@ const CreateBlog = ({ categories }: CreateBlogProps) => {
           >
             Cancel
           </Link>
-          <Button type='submit'>Create Blog</Button>
+          <Button type='submit' className='bg-indigo-500 hover:bg-indigo-600'>
+            Create Blog
+          </Button>
         </CardFooter>
       </Card>
     </form>

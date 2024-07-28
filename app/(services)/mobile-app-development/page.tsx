@@ -1,7 +1,24 @@
 import { lusitana } from '@/app/layout';
 import { Button } from '@/components/ui/button';
+import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
+
+export const metadata: Metadata = {
+  title: 'Mobile App Development',
+  keywords: [
+    'mobile app development',
+    'mobile app development in Kenya',
+    'mobile app development services',
+    'mobile app development company',
+    'mobile app development agency',
+    'mobile app development in Nairobi',
+    'mobile app development in Mombasa',
+    'mobile app development in Kisumu',
+    'mobile app development in Nakuru',
+  ],
+};
 
 const Page = () => {
   const features = [
@@ -39,11 +56,6 @@ const Page = () => {
 
   return (
     <div className='mt-10 p-4 md:container md:mx-auto'>
-      <h1
-        className={`${lusitana.className} font-bold text-3xl text-center md:text-2xl antialiased`}
-      >
-        Mobile App Development
-      </h1>
       <div className='flex justify-center items-center p-6'>
         <Image
           src='/app-development-desktop.webp'
@@ -87,7 +99,7 @@ const Page = () => {
             width={1000}
             height={667}
             priority
-            className='hidden md:block'
+            className='hidden md:block h-auto w-auto'
           />
           <Image
             src='/phone-mobile.webp'
@@ -95,7 +107,7 @@ const Page = () => {
             width={550}
             height={417}
             priority
-            className='block md:hidden'
+            className='block md:hidden h-auto w-auto'
           />
         </div>
         <p className='mt-2 text-center'>
@@ -116,7 +128,7 @@ const Page = () => {
             <div key={index} className='p-4 border rounded-lg'>
               <div className='flex items-center gap-2'>
                 <h1
-                  className={`${lusitana.className} font-bold ml-2 text-lg font-semi-bold`}
+                  className={`${lusitana.className} font-bold text-indigo-500 ml-2 text-lg font-semi-bold`}
                 >
                   {feature.name}
                 </h1>
@@ -129,7 +141,9 @@ const Page = () => {
           <h1 className={`${lusitana.className} text-2xl font-bold`}>
             <Balancer>Ready to get started?</Balancer>
           </h1>
-          <Button className='rounded-full'>Contact us today</Button>
+          <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
+            <Link href='/contact'>Contact us today</Link>
+          </Button>
         </div>
       </div>
     </div>

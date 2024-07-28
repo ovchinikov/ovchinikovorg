@@ -33,7 +33,12 @@ const AddCategory = () => {
               >
                 Cancel
               </Link>
-              <Button type='submit'>Add Category</Button>
+              <Button
+                type='submit'
+                className='bg-indigo-500 hover:bg-indigo-600'
+              >
+                Add Category
+              </Button>
             </CardFooter>
           </form>
         </CardContent>

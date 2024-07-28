@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
-  ArrowRightCircleIcon,
   ChartBarIcon,
   CodeBracketIcon,
   CreditCardIcon,
@@ -17,9 +16,27 @@ import {
   ShoppingCartIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
+
+export const metadata: Metadata = {
+  title: 'Software Development',
+  keywords: [
+    'software development',
+    'software development in Kenya',
+    'software development services',
+    'software development company',
+    'software development agency',
+    'software development in Nairobi',
+    'software development in Mombasa',
+    'software development in Kisumu',
+    'software development in Nakuru',
+    'software development in Eldoret',
+    'software development in Thika',
+  ],
+};
 
 const Page = () => {
   const services = [
@@ -61,11 +78,6 @@ const Page = () => {
   ];
   return (
     <div className='mt-10 p-4 md:container md:mx-auto'>
-      <h1
-        className={`${lusitana.className} text-2xl text-center md:text-3xl font-bold antialiased`}
-      >
-        Software Development
-      </h1>
       <div className='flex items-center justify-center p-6'>
         <Image
           src='/software-dev.webp'
@@ -75,7 +87,7 @@ const Page = () => {
           className='hidden md:block w-full'
         />
         <Image
-          src={'/software-development-mobile.webp'}
+          src={'/software-dev.webp'}
           alt='software development company in kenya'
           height={276}
           width={560}
@@ -83,9 +95,13 @@ const Page = () => {
         />
       </div>
       <div className='mt-6'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a iure
-        unde id quis minima fugit commodi impedit! Quos aut accusantium
-        repudiandae dolore natus quasi pariatur, voluptates sint soluta eos.
+        Transform your vision into reality with our top-tier software
+        development services. Our expert team specializes in creating custom
+        software solutions tailored to your unique business needs. From concept
+        to deployment, we ensure seamless integration, robust functionality, and
+        exceptional user experience. Let us help you innovate and grow with
+        cutting-edge technology and personalized service. Contact us today to
+        start your digital transformation journey.
       </div>
       <div className='mt-6'>
         <h1 className={`${lusitana.className} text-center font-bold text-3xl`}>
@@ -96,7 +112,7 @@ const Page = () => {
         </h1>
         <div className='mt-6'>
           <h1
-            className={`${lusitana.className} font-medium text-2xl text-center`}
+            className={`${lusitana.className} font-semibold text-2xl text-center`}
           >
             Our Services
           </h1>
@@ -104,8 +120,12 @@ const Page = () => {
             {services.map((service) => (
               <Card key={service.name} className='p-4'>
                 <CardTitle className='flex gap-4 items-center'>
-                  {service.icon}
-                  <CardDescription>{service.name}</CardDescription>
+                  <div className='flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-500 rounded-full'>
+                    {service.icon}
+                  </div>
+                  <CardDescription className='font-semibold text-black'>
+                    {service.name}
+                  </CardDescription>
                 </CardTitle>
                 <CardContent className='text-sm'>
                   {service.description}
@@ -121,9 +141,8 @@ const Page = () => {
         <h1 className={`text-2xl font-bold antialiased ${lusitana.className}`}>
           Ready to get started on your next project?
         </h1>
-        <Button className='flex gap-2'>
+        <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
           <Link href='/contact'>Get in touch</Link>
-          <ArrowRightCircleIcon height={24} width={24} />
         </Button>
       </div>
     </div>

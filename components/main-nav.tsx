@@ -15,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Button } from './ui/button';
+import { usePathname } from 'next/navigation';
 
 const services = [
   {
@@ -44,6 +45,7 @@ const services = [
 ];
 
 export function MainNav() {
+  const pathname = usePathname();
   return (
     <div className='hidden md:block'>
       <div className='flex justify-between items-center p-4'>
@@ -82,7 +84,7 @@ export function MainNav() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Button className='rounded-full'>
+        <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
           <Link href='/contact'>Get in touch</Link>
         </Button>
       </div>
