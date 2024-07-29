@@ -1,11 +1,16 @@
-import CreateBlog from '@/components/forms/create-blog';
 import { getCategories } from '@/lib/data';
+
+import dynamic from 'next/dynamic';
+
+const CreateBlog = dynamic(() => import('@/components/forms/create-blog'), {
+  ssr: false,
+});
 
 const Page = async () => {
   const categories = await getCategories();
   // console.log(categories);
   return (
-    <div className=''>
+    <div>
       <CreateBlog categories={categories} />
     </div>
   );

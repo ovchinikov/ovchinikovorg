@@ -1,5 +1,9 @@
-import EditBlog from '@/components/forms/edit-blog';
 import { getCategories, getPostById } from '@/lib/data';
+import dynamic from 'next/dynamic';
+
+const EditBlog = dynamic(() => import('@/components/forms/edit-blog'), {
+  ssr: false,
+});
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const id = params.id;
