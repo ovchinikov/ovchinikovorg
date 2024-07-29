@@ -83,15 +83,15 @@ export default async function Home() {
               src='/hero-desktop.webp'
               alt='vinokov tech co hero image'
               width={1000}
-              height={677}
+              height={820}
               priority={true}
               className='hidden sm:block'
             />
             <Image
               src='/hero-mobile.webp'
               alt='vinokov tech co hero image'
-              width={560}
-              height={577}
+              width={559}
+              height={459}
               priority={true}
               className='block sm:hidden'
             />
