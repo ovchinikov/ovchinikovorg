@@ -128,7 +128,7 @@ const Page = () => {
         </p>
       </div>
       <div>
-        <h1 className={`${lusitana.className} font-bold text-2xl`}>
+        <h1 className={`${lusitana.className} font-bold text-center text-2xl`}>
           Why choose us?
         </h1>
         <hr className='mb-4' />
