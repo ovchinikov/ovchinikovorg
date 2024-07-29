@@ -1,2 +1,3 @@
-disallow */login
-disallow */dashboard
+User-agent: *
+Disallow: /login
+Disallow: /dashboard
