@@ -17,10 +17,10 @@ const Page = () => {
             Ready to grow your business?
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            modi ipsa tenetur qui, facilis harum, doloribus nulla nemo eveniet,
-            voluptas eos aliquam nisi assumenda! Aliquam voluptates animi culpa
-            delectus hic!
+            We&apos;re here to help you achieve your goals with innovative
+            technology and exceptional service. Whether you need custom software
+            solutions, SEO optimization, web development, or mobile app
+            creation, our expert team is ready to assist you.
           </p>
         </div>
         <div className='flex-1 flex justify-center items-center p-6'>

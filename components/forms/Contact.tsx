@@ -55,11 +55,25 @@ const ContacForm = () => {
       <div className='grid grid-cols-1 gap-4'>
         <div>
           <Label htmlFor='name'>Name</Label>
-          <Input type='text' id='user_name' name='from_name' required className='mt-2' />
+          <Input
+            type='text'
+            id='user_name'
+            name='from_name'
+            required
+            className='mt-2'
+            placeholder='Your name'
+          />
         </div>
         <div>
           <Label htmlFor='phone'>Phone </Label>
-          <Input type='tel' id='phone' name='user_email' required className='mt-2' />
+          <Input
+            type='tel'
+            id='phone'
+            name='phone'
+            placeholder='Your Phone No.'
+            required
+            className='mt-2'
+          />
         </div>
         <div>
           <Label htmlFor='message'>Message</Label>

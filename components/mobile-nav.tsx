@@ -110,7 +110,9 @@ export function MobileNav() {
         </SheetContent>
       </Sheet>
       <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900 md:hidden'>
-        <Link href='/contact'>Get in touch</Link>
+        <Link href='/contact' className='p-2'>
+          Get in touch
+        </Link>
       </Button>
     </div>
   );

@@ -197,7 +197,9 @@ const Page = () => {
           </div>
 
           <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
-            <Link href='/contact'>Get a free quote</Link>
+            <Link href='/contact' className='p-2'>
+              Get a free quote
+            </Link>
           </Button>
         </div>
       </div>

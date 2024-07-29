@@ -143,7 +143,9 @@ const Page = () => {
             <Balancer>Ready to get started?</Balancer>
           </h1>
           <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
-            <Link href='/contact'>Contact us today</Link>
+            <Link href='/contact' className='p-2'>
+              Contact us today
+            </Link>
           </Button>
         </div>
       </div>

@@ -102,7 +102,9 @@ const Page = () => {
             </p>
           </div>
           <Button className='mt-6 sm:w-1/3 rounded-full bg-indigo-500 hover:bg-indigo-900'>
-            <Link href='/contact'>Contact us</Link>
+            <Link href='/contact' className='mt-2'>
+              Contact us
+            </Link>
           </Button>
         </div>
       </div>

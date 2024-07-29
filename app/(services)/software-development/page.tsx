@@ -139,7 +139,9 @@ const Page = () => {
           Ready to get started on your next project?
         </h1>
         <Button className='rounded-full bg-indigo-500 hover:bg-indigo-900'>
-          <Link href='/contact'>Get in touch</Link>
+          <Link href='/contact' className='p-2'>
+            Get in touch
+          </Link>
         </Button>
       </div>
     </div>

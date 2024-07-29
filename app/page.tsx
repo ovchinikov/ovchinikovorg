@@ -194,7 +194,9 @@ export default async function Home() {
           </h1>
         </div>
         <Button className='flex justify gap-4 rounded-full bg-indigo-500 hover:bg-indigo-900'>
-          <Link href='/contact'>Contact us</Link>
+          <Link href='/contact' className='p-2'>
+            Contact us
+          </Link>
         </Button>
       </div>
       <div className='mt-6'>
@@ -214,7 +216,9 @@ export default async function Home() {
           variant='link'
           className='flex justify-center items-center gap-3 text-indigo-500 underline'
         >
-          <Link href='/blog'>View all posts</Link>
+          <Link href='/blog' className='p-2'>
+            View all posts
+          </Link>
           <ArrowRightCircleIcon height={20} width={20} />
         </Button>
       </div>
