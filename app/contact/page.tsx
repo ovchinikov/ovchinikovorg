@@ -29,6 +29,7 @@ const Page = () => {
             alt='vinokov tech co contact us page image'
             width={1000}
             height={667}
+            priority={true}
             className='hidden sm:block'
           />
         </div>

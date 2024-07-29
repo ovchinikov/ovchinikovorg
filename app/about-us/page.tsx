@@ -135,6 +135,7 @@ const Page = () => {
               alt='Mission'
               width={1000}
               height={600}
+              priority={true}
               className='h-auto w-auto'
             />
           </div>

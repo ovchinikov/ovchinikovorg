@@ -62,7 +62,7 @@ const Page = () => {
           alt='mobile app-development in kenya'
           width={1000}
           height={667}
-          priority
+          priority={true}
           className='hidden md:block'
         />
         <Image
@@ -70,6 +70,7 @@ const Page = () => {
           alt='mobile app development in kenya'
           width={600}
           height={400}
+          priority={true}
           className='block md:hidden'
         />
       </div>

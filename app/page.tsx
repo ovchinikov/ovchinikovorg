@@ -92,6 +92,7 @@ export default async function Home() {
               alt='vinokov tech co hero image'
               width={560}
               height={577}
+              priority={true}
               className='block sm:hidden'
             />
           </div>

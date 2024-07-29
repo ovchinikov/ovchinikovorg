@@ -80,12 +80,14 @@ const Page = () => {
           height={492}
           width={1000}
           className='hidden md:block w-full'
+          priority={true}
         />
         <Image
           src={'/software-dev.webp'}
           alt='software development company in kenya'
           height={276}
           width={560}
+          priority={true}
           className='block md:hidden'
         />
       </div>

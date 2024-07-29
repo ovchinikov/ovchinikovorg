@@ -46,6 +46,7 @@ const Page = () => {
             alt='e-commerce web development in Kenya'
             height={411}
             width={560}
+            priority={true}
           />
         </div>
       </div>
