@@ -5,7 +5,7 @@ const Footer = () => {
   const socialsLinks = [
     {
       name: 'Linkedin',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/vinokov/',
       href: '',
     },
     {

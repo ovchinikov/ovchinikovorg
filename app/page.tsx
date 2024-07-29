@@ -66,14 +66,18 @@ export default async function Home() {
           <div className='flex flex-col gap-4 items-center'>
             <h1 className={`${lusitana.className} text-3xl font-bold`}>
               <Balancer>
-                Solving your business needs with great software solutions.
+                Empower Your Business with{' '}
+                <span className='text-indigo-500'>
+                  Cutting-Edge Software Solutions
+                </span>
               </Balancer>
             </h1>
-            <p>
-              We are a team of developers with a passion for solving problems
-              and creating great software solutions. We work with businesses of
-              all sizes to help them achieve their goals.
-            </p>
+            <h2 className={`text-xl`}>
+              <Balancer>
+                Innovative Technology, Tailored to Your Needs - Streamline
+                Operations, Boost Productivity, and Drive Growth.
+              </Balancer>
+            </h2>
           </div>
           <div className='flex justify-center items-center p-6'>
             <Image
@@ -81,6 +85,7 @@ export default async function Home() {
               alt='vinokov tech co hero image'
               width={1000}
               height={677}
+              priority={true}
               className='hidden sm:block'
             />
             <Image

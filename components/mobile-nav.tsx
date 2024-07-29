@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { docsConfig } from '@/config/doc';
 import { siteConfig } from '@/config/site';
@@ -18,9 +18,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { ServerStackIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
 
   return (
     <div className='flex items-center p-4 justify-between'>
@@ -71,8 +74,10 @@ export function MobileNav() {
                 className='flex items-center'
                 onOpenChange={setOpen}
               >
-                <Icons.logo className='mr-2 h-4 w-4' />
-                <span className='font-bold sr-only'>{siteConfig.name}</span>
+                <span className='flex gap-1 items-center justify-center font-bold text-indigo-500'>
+                  <ServerStackIcon className='w-8 h-8' />
+                  Vinokov
+                </span>
               </MobileLink>
             </SheetTitle>
             <SheetDescription className='sr-only'>
@@ -80,7 +85,7 @@ export function MobileNav() {
             </SheetDescription>
           </SheetHeader>
 
-          <ScrollArea className='my-4 h-[calc(100vh-2rem)] pb-10 pl-6'>
+          <ScrollArea className='my-4 h-[calc(100vh-2rem)] pb-10 pl-2 pr-2'>
             <div className='flex flex-col space-y-2'>
               <div className='flex flex-col space-y-3'>
                 {docsConfig.mainNav?.map(
@@ -89,6 +94,10 @@ export function MobileNav() {
                       <MobileLink
                         key={item.href}
                         href={item.href}
+                        className={clsx(
+                          item.href === pathname &&
+                            'text-indigo-500 bg-indigo-100 p-2 rounded-md w-full',
+                        )}
                         onOpenChange={setOpen}
                       >
                         {item.title}
@@ -121,6 +130,7 @@ function MobileLink({
   ...props
 }: MobileLinkProps) {
   const router = useRouter();
+
   return (
     <Link
       href={href}

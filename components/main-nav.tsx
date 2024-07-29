@@ -16,6 +16,8 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Button } from './ui/button';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import { ServerIcon, ServerStackIcon } from '@heroicons/react/24/outline';
 
 const services = [
   {
@@ -49,8 +51,11 @@ export function MainNav() {
   return (
     <div className='hidden md:block'>
       <div className='flex justify-between items-center p-4'>
-        <Link className={navigationMenuTriggerStyle()} href='/'>
-          Home
+        <Link href='/'>
+          <span className='flex gap-1 items-center justify-center font-bold text-indigo-500'>
+            <ServerStackIcon className='w-8 h-8' />
+            Vinokov
+          </span>
         </Link>
         <NavigationMenu className=''>
           <NavigationMenuList>
