@@ -5,6 +5,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog',
+  description: 'Read our blogs',
+  keywords: [
+    'Web design and development',
+    'Software development',
+    'Web development',
+    'IT services',
+  ],
 };
 
 const Page = async () => {

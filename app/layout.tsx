@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Lusitana } from 'next/font/google';
 import './globals.css';
-import { MobileNav } from '@/components/mobile-nav';
-import { MainNav } from '@/components/main-nav';
 import { SiteHeader } from '@/components/site-header';
 import Footer from '@/components/Footer';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import WhatsappWidget from '@/components/whatsappWidget';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +16,18 @@ export const metadata: Metadata = {
     template: '%s | Vinokov Tech Co.',
     default: 'Vinokov Tech Co.',
   },
-  description: '',
+  description: 'Web design and development company in Kenya',
+  keywords: [
+    'web design and development',
+    'Web design company',
+    'IT software company',
+    'Software development company',
+    'Web development company',
+    'Web design company in Kenya',
+    'Web development company in Kenya',
+    'Software development company in Kenya',
+    'IT services',
+  ],
   metadataBase: new URL('https://vinokov.tech'),
   openGraph: {
     type: 'website',
@@ -29,7 +37,7 @@ export const metadata: Metadata = {
     siteName: 'Vinokov Tech Co.',
     images: [
       {
-        url: 'http://localhost:3000/og.png',
+        url: 'https://vinokov.tech/og.png',
         width: 1200,
         height: 630,
       },

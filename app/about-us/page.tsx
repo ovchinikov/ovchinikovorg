@@ -14,6 +14,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us',
+  description: 'About Vinokov Tech Co Ltd',
+  keywords: [
+    'Software development',
+    'SEO optimization',
+    'It consulting',
+    'law firm web design',
+    'cheap web design',
+  ],
 };
 
 const Page = () => {

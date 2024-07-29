@@ -16,17 +16,11 @@ import Balancer from 'react-wrap-balancer';
 export const metadata: Metadata = {
   title: 'E-commerce Development',
   keywords: [
-    'e-commerce development',
-    'e-commerce development in Kenya',
-    'e-commerce development services',
-    'e-commerce development company',
-    'e-commerce development agency',
-    'e-commerce development in Nairobi',
-    'e-commerce development in Mombasa',
-    'e-commerce development in Kisumu',
-    'e-commerce development in Nakuru',
-    'e-commerce development in Eldoret',
-    'e-commerce development in Thika',
+    'ecommerce development company',
+    'ecommerce website developer near me',
+    'ecommerce development company',
+    'ecommerce development services',
+    'ecommerce app development company',
   ],
 };
 

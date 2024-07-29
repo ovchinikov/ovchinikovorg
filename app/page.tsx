@@ -7,7 +7,6 @@ import Balancer from 'react-wrap-balancer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import styles from '@/app/home.module.css';
 import { getHomePosts } from '@/lib/data';
-import { dateToString } from '@/lib/utils';
 import Blog from '@/components/blog/Blog';
 
 export default async function Home() {

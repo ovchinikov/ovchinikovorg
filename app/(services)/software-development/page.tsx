@@ -24,17 +24,12 @@ import Balancer from 'react-wrap-balancer';
 export const metadata: Metadata = {
   title: 'Software Development',
   keywords: [
-    'software development',
-    'software development in Kenya',
-    'software development services',
-    'software development company',
-    'software development agency',
-    'software development in Nairobi',
-    'software development in Mombasa',
-    'software development in Kisumu',
-    'software development in Nakuru',
-    'software development in Eldoret',
-    'software development in Thika',
+    'healthcare software development companies',
+    'custom software company',
+    'affordable web design for small business',
+    'software development consulting',
+    'web and app development company',
+    'top custom software development companies',
   ],
 };
 

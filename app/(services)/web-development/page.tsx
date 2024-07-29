@@ -8,16 +8,11 @@ import Balancer from 'react-wrap-balancer';
 export const metadata: Metadata = {
   title: 'Web Development',
   keywords: [
-    'web development',
-    'web design',
-    'web development in Kenya',
-    'web design in Kenya',
-    'web development services',
-    'web design services',
-    'web development agency',
-    'web design agency',
-    'web development company',
-    'web design company',
+    'small business website cost',
+    'ecommerce web developers',
+    'ecommerce development services',
+    'professional website development',
+    'ecommerce app development company',
   ],
 };
 
